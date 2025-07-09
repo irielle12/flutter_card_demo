@@ -50,7 +50,14 @@ class ProfileCard extends StatelessWidget {
               Text('Software Engineer'),
               Spacer(),
               ElevatedButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('📩 You contacted Jane!'),
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
+                },
                 icon: Icon(Icons.email),
                 label: Text('Contact'),
               ),
